@@ -24,7 +24,7 @@ export default
     {
         getSkull()
         {
-            axios.get('http://localhost:5000/skull')
+            axios.get('${process.env.VUE_APP_ROOT_URL}/skull')
             .then(response => (this.msg = response.data))
             .catch(error => console.log(error))
         }
